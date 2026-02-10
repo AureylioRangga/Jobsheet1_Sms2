@@ -4,13 +4,18 @@ public class TugasNo2 {
     static Scanner inputUser = new Scanner(System.in);
 
     public static void main(String[] args) {
+
+        // Meminta jumlah mata kuliah yang akan diinput
         System.out.print("Masukkan jumlah mata kuliah yang ingin diinput (n): ");
         int jumlahData = inputUser.nextInt();
         inputUser.nextLine();
 
+        
+        // Array 2D untuk menyimpan data jadwal (matkul, ruang, hari, jam)
         String[][] dataKuliah = new String[jumlahData][4];
-        isiDataJadwal(dataKuliah);
+        isiDataJadwal(dataKuliah);   // Memanggil method untuk mengisi data jadwal
 
+        // Perulangan Menu Utama
         while (true) {
             System.out.println("\n=== MENU JADWAL KULIAH ===");
             System.out.println("1. Tampilkan Seluruh Jadwal");
@@ -26,7 +31,7 @@ public class TugasNo2 {
                     tampilSemua(dataKuliah);
                     break;
                 case 2:
-                    System.out.print("Masukkan nama hari (Senin/Selasa/dll): ");
+                    System.out.print("Masukkan nama hari: ");
                     String hariCari = inputUser.nextLine();
                     tampilJadwalHari(dataKuliah, hariCari);
                     break;
@@ -45,7 +50,8 @@ public class TugasNo2 {
     }
 
     static void isiDataJadwal(String[][] jadwalKuliah) {
-        System.out.println("\n--- Input Data Jadwal ---");
+        System.out.println("\n----- Input Data Jadwal -----");
+         // Perulangan untuk mengisi data jadwal
         for (int indeks = 0; indeks < jadwalKuliah.length; indeks++) {
             System.out.println("Data ke-" + (indeks + 1));
 
@@ -58,17 +64,19 @@ public class TugasNo2 {
             System.out.print("Hari                 : ");
             jadwalKuliah[indeks][2] = inputUser.nextLine();
 
-            System.out.print("Jam (contoh: 08.00)  : ");
+            System.out.print("Jam                  : ");
             jadwalKuliah[indeks][3] = inputUser.nextLine();
             System.out.println();
         }
     }
 
     static void tampilSemua(String[][] jadwalKuliah) {
-        System.out.println("\n--- Seluruh Jadwal Kuliah ---");
+        System.out.println("\n----- Seluruh Jadwal Kuliah -==--");
+        // Header tabel jadwal
         System.out.printf("%-25s %-15s %-10s %-15s\n", "Mata Kuliah", "Ruang", "Hari", "Jam");
         System.out.println("-------------------------------------------------------------------");
 
+        // Menampilkan semua data jadwal
         for (int indeks = 0; indeks < jadwalKuliah.length; indeks++) {
             System.out.printf("%-25s %-15s %-10s %-15s\n",
                     jadwalKuliah[indeks][0], jadwalKuliah[indeks][1],
@@ -90,7 +98,7 @@ public class TugasNo2 {
                 statusKetemu = true;
             }
         }
-
+        // Jika tidak ada jadwal pada hari tersebut
         if (!statusKetemu) {
             System.out.println("Tidak ada jadwal kuliah pada hari " + hariTarget);
         }
@@ -102,6 +110,7 @@ public class TugasNo2 {
         System.out.println("-------------------------------------------------------------------");
 
         boolean statusKetemu = false;
+        // Mencari jadwal berdasarkan nama mata kuliah
         for (int indeks = 0; indeks < jadwalKuliah.length; indeks++) {
             if (jadwalKuliah[indeks][0].equalsIgnoreCase(matkulTarget)) {
                 System.out.printf("%-25s %-15s %-10s %-15s\n",
@@ -110,7 +119,8 @@ public class TugasNo2 {
                 statusKetemu = true;
             }
         }
-
+        
+        // Jika mata kuliah tidak ditemukan
         if (!statusKetemu) {
             System.out.println("Tidak ada mata kuliah bernama \"" + matkulTarget + "\"");
         }

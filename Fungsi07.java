@@ -2,10 +2,10 @@ public class Fungsi07 {
 
     // Array 2 dimensi untuk menyimpan stok bunga setiap cabang
     static int[][] stok = {
-        {10, 5, 15, 7},    
-        {6, 11, 9, 12},     
-        {2, 10, 10, 5},     
-        {5, 7, 12, 9}      
+        {10, 5, 15, 7},    // RoyalGarden 1
+        {6, 11, 9, 12},    // RoyalGarden 2
+        {2, 10, 10, 5},    // RoyalGarden 3
+        {5, 7, 12, 9}      // RoyalGarden 4
     };  
 
     // Array harga bunga sesuai urutan jenis bunga
