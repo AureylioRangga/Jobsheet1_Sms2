@@ -8,7 +8,7 @@ public class Fungsi07 {
         {5, 7, 12, 9}      // RoyalGarden 4
     };  
 
-    // Array harga bunga sesuai urutan jenis bunga
+    // Array harga bunga sesuai urutan jenis bunga 
     static int[] harga = {75000, 50000, 60000, 10000};
    
     static int hitungPendapatan(int cabang) {
