@@ -6,7 +6,7 @@ public class Fungsi07 {
         {6, 11, 9, 12},     
         {2, 10, 10, 5},     
         {5, 7, 12, 9}      
-    }; 
+    };  
 
     // Array harga bunga sesuai urutan jenis bunga
     static int[] harga = {75000, 50000, 60000, 10000};

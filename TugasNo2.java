@@ -97,7 +97,7 @@ public class TugasNo2 {
     }
 
     static void tampilJadwalMatkul(String[][] jadwalKuliah, String matkulTarget) {
-        System.out.println("\n--- Pencarian Mata Kuliah: " + matkulTarget + " ---");
+        System.out.println("\n------- Pencarian Mata Kuliah: " + matkulTarget + " -------");
         System.out.printf("%-25s %-15s %-10s %-15s\n", "Mata Kuliah", "Ruang", "Hari", "Jam");
         System.out.println("-------------------------------------------------------------------");
 
