@@ -7,7 +7,7 @@ public class Perulangan07 {
         String nim = sc.nextLine();
 
         int n = Integer.parseInt(nim.substring(nim.length() - 2));
-        
+         
         if (n < 10) { 
             n += 10;
         }
