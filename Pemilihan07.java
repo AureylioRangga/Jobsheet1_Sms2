@@ -22,7 +22,7 @@ public class Pemilihan07 {
             String huruf;
             if (nilaiAkhir >= 80) huruf = "A";
             else if (nilaiAkhir >= 73) huruf = "B+";
-            else if (nilaiAkhir >= 65) huruf = "B";
+            else if (nilaiAkhir >= 65) huruf = "B"; 
             else if (nilaiAkhir >= 60) huruf = "C+";
             else if (nilaiAkhir >= 50) huruf = "C";
             else if (nilaiAkhir >= 40) huruf = "D";
