@@ -6,7 +6,7 @@ public class TugasNo1 {
 
         System.out.println("=== PROGRAM KODE PLAT KENDARAAN ===");
 
-        char[] kode = {'A','B','D','E','F','T','Z','G','H','K'};
+        char[] kode = {'A','B','D','E','F','T','Z','G','H','K'};  
         
         String[] kota = {"Banten","Jakarta","Bandung","Cirebon","Bogor","Tegal","Garut",
                          "Pekalongan","Semarang","Kendal"};
